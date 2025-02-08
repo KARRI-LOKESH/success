@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    color:azure;
+    text-shadow: 2px 5px solid green;
+    background-color: rgb(136, 136, 177);
+}
+body{
+    background-color: rgb(193, 190, 166);
+}
+td{
+    border:2px solid rgb(59, 230, 12);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+th{
+    border: 3px solid rgb(96, 115, 191);
+    gap: none;
+    margin:0;
+    padding:none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% load static %}
+    <!-- Correct way to reference static CSS file -->
+    <link rel="stylesheet" href="{% static 'mem.css' %}">
+  </head>
+  <body>
+    <h1>Members</h1>
+    <table>
+      <tr>
+        <th>name</th>
+        <th>roll no</th>
+        <th>age</th>
+        <th>email</th>
+        <th>phone</th>
+      </tr>
+      {% for x in mydata %}
+      <tr>
+        <td>{{ x.name }}</td>
+        <td>{{ x.rollno }}</td>
+        <td>{{ x.age }}</td>
+        <td>{{ x.email }}</td>
+        <td>{{ x.phone }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
