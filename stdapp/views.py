@@ -75,3 +75,18 @@ def student_signup(request):
         form = StudentForm()
 
     return render(request, 'student_signup.html', {'form': form})
+
+def student_login(request):
+    if request.method == 'POST':
+        rollno = request.POST.get('rollno')
+        email = request.POST.get('email')
+
+        # Check if student exists
+        try:
+            student = Student.objects.get(rollno=rollno, email=email)
+            messages.success(request, f'Welcome, {student.name}!')
+            return redirect('http://localhost:3000/')  # Redirect to home or another page
+        except Student.DoesNotExist:
+            messages.error(request, 'Invalid roll number or email.')
+
+    return render(request, 'student_login.html')
