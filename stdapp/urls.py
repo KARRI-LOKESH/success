@@ -11,4 +11,4 @@ urlpatterns = [
     path('StudentData/',StudentData.as_view()),
     path('signup/',student_signup, name='student_signup'),
     path('login/', student_login, name='student_login'),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
