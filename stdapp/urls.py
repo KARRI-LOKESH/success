@@ -1,4 +1,4 @@
-
+from django.conf.urls.static import static
 from django.urls import path
 from stdapp import views
 from .views import student_signup,student_login
